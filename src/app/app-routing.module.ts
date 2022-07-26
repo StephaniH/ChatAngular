@@ -22,7 +22,11 @@ const routes: Routes = [
     loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasModule)
   },
   
-  {path: 'gifs', component: GifSidebarComponent  }
+  {path: 'gifs', component: GifSidebarComponent  },
+  {
+    path: 'homechat',
+    loadChildren: () => import('./client/client.module').then( m => m.ClientModule)
+  }
   
 ];
 
